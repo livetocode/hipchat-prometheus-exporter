@@ -24,6 +24,7 @@ spec:
             - "-rooms={{.Values.hipchat.rooms | join ","}}"
             - "-authtoken=$(AUTH_TOKEN)"
             - "-port={{.Values.service.internalPort}}"
+            - "-verbose={{.Values.hipchat.verbose}}"
           env:
             - name: AUTH_TOKEN
               valueFrom:

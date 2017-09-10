@@ -71,10 +71,11 @@ func main() {
 	authToken := flag.String("authtoken", "", "The access token used to call the HipChat API.")
 	port      := flag.Int("port", 8080, "The http port the server will listen on")
 	interval  := flag.Duration("interval", time.Second * 30, "The interval between 2 scrapes")
-	verbose   := flag.Bool("verbose", true, "Should we log the requests?")
+	verbose   := flag.Bool("verbose", false, "Should we log the requests?")
 	
-	// Validate flags
 	flag.Parse()
+
+	// Validate flags
 	if *roomNames == "" {
 		fmt.Println("You must specify a list of rooms!")
 		fmt.Println()
