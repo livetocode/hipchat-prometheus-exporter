@@ -11,6 +11,14 @@ It will then create the following Prometheus metrics that you can use in a Dashb
 
 Note that each metric will have a **"name"** property containing the Room's name.
 
+## Requirements
+
+You must create a AuthToken in the HipChat admin pages:
+
+Goto https://MyCompany.hipchat.com/account/api
+
+Then create a new Token with at least the *"View Room"* scope.
+
 ## Build
 
 To create a local docker image, execute:
@@ -21,7 +29,7 @@ To create a local docker image, execute:
 
 ## Run
 
-Once you have the image built, you can run it in Docker locally for testing it:
+Once you have the image built and your AuthTojen, you can run it in Docker locally for testing it:
 
 ```
 ./scripts/run-image.sh -authToken myToken -rooms room1,room2
